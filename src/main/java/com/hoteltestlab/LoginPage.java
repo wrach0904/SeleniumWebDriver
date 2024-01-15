@@ -26,4 +26,6 @@ public class LoginPage extends BasePage {
     public String loginAssertCheck(){
         return getText(loginAssertCheck);
     }
+
+
 }

@@ -33,6 +33,11 @@ public class BasePage {
         find(locator).sendKeys(text);
     }
 
+    protected void goTo(String URL){
+        driver.get(URL);
+    }
+
+
     protected String printText(By locator){
         String text = find(locator).getText();
         System.out.println("Text: " + text);

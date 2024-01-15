@@ -1,5 +1,7 @@
-package com.hoteltestlab;
+package com.hoteltestlab.selenium;
 
+import com.hoteltestlab.BasePage;
+import com.hoteltestlab.MyBookingPage;
 import org.junit.jupiter.api.TestInstance;
 import org.testng.annotations.*;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +27,7 @@ public class BaseTest {
 
     @AfterClass
     public void tearDown(){
-        //driver.quit();
+        //
     }
 
     @BeforeMethod

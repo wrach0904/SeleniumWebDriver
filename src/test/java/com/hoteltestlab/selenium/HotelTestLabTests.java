@@ -1,6 +1,9 @@
-package com.hoteltestlab;
+package com.hoteltestlab.selenium;
 
+import com.hoteltestlab.*;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.Serializers;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 import java.util.Random;
@@ -11,11 +14,13 @@ import static org.junit.Assert.fail;
 public class HotelTestLabTests extends BaseTest {
 
     MyBookingPage myBookingPage = new MyBookingPage();
+    MyAccountPage myAccountPage = new MyAccountPage();
     LoginPage loginPage = new LoginPage();
     CreateAccountPage createAccountPage = new CreateAccountPage();
+    AddressesPage addressesPage = new AddressesPage();
+
     private String email;
     private String password;
-
 
     @Test
     public void changeLanguage(){
@@ -58,6 +63,18 @@ public class HotelTestLabTests extends BaseTest {
         } catch (NoSuchElementException ex) {
             fail("Creating the account failed.");
         }
+    }
+
+    @Test
+    public void addNewAddress() throws InterruptedException {
+        loginUser();
+        myAccountPage.goToAddressesPage();
+        addressesPage.addNewAddress();
+    }
+
+    @Test
+    public void test() {
+
     }
 
 
