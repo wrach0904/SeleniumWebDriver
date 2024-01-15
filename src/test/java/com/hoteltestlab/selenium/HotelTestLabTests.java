@@ -8,8 +8,7 @@ import org.testng.annotations.*;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class HotelTestLabTests extends BaseTest {
 
@@ -59,7 +58,7 @@ public class HotelTestLabTests extends BaseTest {
         System.out.println("Password: " + password);
         createAccountPage.createAccount(email, "Lilly", "Brooks", password);
         try {
-            assertEquals("MY ACCOUNT", loginPage.loginAssertCheck());
+            assertEquals("MY ACCOUNT", loginPage.registerAssertCheck());
         } catch (NoSuchElementException ex) {
             fail("Creating the account failed.");
         }
@@ -70,6 +69,11 @@ public class HotelTestLabTests extends BaseTest {
         loginUser();
         myAccountPage.goToAddressesPage();
         addressesPage.addNewAddress();
+        try {
+            assertEquals("MY ADDRESSES", addressesPage.newAddAssertCheck());
+        } catch (NoSuchElementException ex) {
+            fail("Creating the address failed.");
+        }
     }
 
     @Test

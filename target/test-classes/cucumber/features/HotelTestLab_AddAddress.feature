@@ -10,4 +10,4 @@ Feature: Adding new address
     Examples:
       | email               | password  |
       | test@test631387.com | Abc435353 |
-      | test886669@test.com | Abcd1234  |
+#      | test886669@test.com | Abcd1234  |

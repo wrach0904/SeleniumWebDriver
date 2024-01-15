@@ -15,6 +15,11 @@ public class AddressesPage extends BasePage {
     private By phoneNoField = By.id("phone_mobile");
     private By saveButton = By.id("submitAddress");
     private By aliasField = By.id("alias");
+    private By assertPageName = By.xpath("//*[@id=\"center_column\"]/h1");
+
+    public String newAddAssertCheck(){
+        return getText(assertPageName);
+    }
 
     public void addNewAddress(){
         click(addNewButton);

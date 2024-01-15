@@ -10,6 +10,7 @@ public class LoginPage extends BasePage {
     private By submitLogin = By.id("SubmitLogin");
     private By submitCreate = By.id("SubmitCreate");
     private By loginAssertCheck = By.className("page-heading");
+    private By registerAssertCheck = By.className("page-heading");
 
 
     public void logInUser(String email, String password){
@@ -25,6 +26,10 @@ public class LoginPage extends BasePage {
 
     public String loginAssertCheck(){
         return getText(loginAssertCheck);
+    }
+
+    public String registerAssertCheck(){
+        return getText(registerAssertCheck);
     }
 
 

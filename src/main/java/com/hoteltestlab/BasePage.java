@@ -12,7 +12,7 @@ public class BasePage {
         BasePage.driver = driver;
     }
 
-    protected String currentURL (){
+    protected String currentURL(){
         String URL = driver.getCurrentUrl();
         return URL;
     }
