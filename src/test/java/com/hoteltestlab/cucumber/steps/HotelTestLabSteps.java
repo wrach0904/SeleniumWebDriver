@@ -7,8 +7,6 @@ import com.hoteltestlab.LoginPage;
 import com.hoteltestlab.MyBookingPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Random;
 
