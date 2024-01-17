@@ -1,11 +1,16 @@
 package pl.mystoretestlab;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.apache.commons.io.*;
+
+import java.io.File;
+import java.io.IOException;
 
 public class BasePage {
+
 
     public static WebDriver driver;
     public void setDriver (WebDriver driver){
@@ -37,6 +42,10 @@ public class BasePage {
         driver.get(URL);
     }
 
+    protected void hoverOver(By locator){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(find(locator)).build().perform();
+    }
 
     protected String printText(By locator){
         String text = find(locator).getText();
@@ -48,5 +57,7 @@ public class BasePage {
         String text = find(locator).getText();
         return text;
     }
+
+
 
 }

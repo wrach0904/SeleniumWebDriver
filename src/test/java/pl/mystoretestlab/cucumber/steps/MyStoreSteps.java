@@ -22,11 +22,23 @@ public class MyStoreSteps extends BaseTest {
         myStorePage.goToLoginPage();
     }
 
+    @Given("a logged in user")
+    public void loggingTheUser(){
+        setUp();
+        loadApplication();
+        myStorePage.goToLoginPage();
+        loginPage.loginTheUser("ehkigoieqhsgmkymjt@cwmxc.com", "Abcd1234");
+    }
+
     @When("user logins with their valid credentials")
     public void userLogin(){
         loginPage.loginTheUser("ehkigoieqhsgmkymjt@cwmxc.com", "Abcd1234");
     }
 
+    @When("a Hummingbird Printed Sweater {} size {}x id added to the cart")
+    public void addProductToTheCart(){
+        myAccountPage.goToWomenClothesPage();
+    }
 
     @Then("they can add their new address {}  {} {} {} {} {}")
     public void enterNewAddress(String alias, String street, String house, String city, String zipcode, String phone) {
@@ -40,6 +52,11 @@ public class MyStoreSteps extends BaseTest {
                 addressesPage.getDeleteAssert());
     }
 
+    @Then("user buys the products")
+    public void buyingTheProducts(){}
+
+    @And("receipt screenshot is taken")
+    public void takeScreenshot(){}
 
     @And("quit the browser")
     public void quitBrowser(){
