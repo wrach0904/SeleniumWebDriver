@@ -8,5 +8,5 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/cucumber/features/MyStoreTestsZaliczenie1.feature",
         plugin = {"pretty", "html:report.html"})
 
-public class MyStoreTests {
+public class MyStoreZad1Test {
 }

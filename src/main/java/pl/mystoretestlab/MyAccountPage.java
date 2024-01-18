@@ -23,4 +23,9 @@ public class MyAccountPage extends BasePage {
         click(womenButton);
     }
 
+    public OrderHistoryPage goToOrderHistoryPage(){
+        click(orderHistory);
+        return new OrderHistoryPage();
+    }
+
 }
