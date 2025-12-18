@@ -31,7 +31,7 @@ public class ClothesPage extends BasePage {
             click(mSize);
         } else if ( size == 'L') {
             click(lSize);
-        } else {
+        } else if (size == 'X'){
             click(xlSize);
         }
     }

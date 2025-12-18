@@ -41,8 +41,7 @@ public class BaseTest {
         myStorePage = new MyStorePage();
     }
 
-    //@AfterEach
-    //takeSchreenshots
+
 
 }
 

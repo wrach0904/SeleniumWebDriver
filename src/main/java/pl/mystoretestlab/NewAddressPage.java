@@ -1,10 +1,7 @@
 package pl.mystoretestlab;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.checkerframework.checker.units.qual.N;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import java.util.Random;
 
