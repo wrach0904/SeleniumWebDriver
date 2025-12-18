@@ -25,8 +25,9 @@ public class MyStoreTestsZaliczenie extends BaseTest {
         addressesPage.goToNewAddressPage();
         newAddressPage.enterNewAddress("My Address 02", "Oxford St", "33",
                                     "Liverpool", "L69", "669797516");
+        System.out.println(addressesPage.getAddressAssert());
         assertTrue("Input doesn't match", addressesPage.getAddressAssert().contains(addressesPage.theAddress()));
-
+        //System.out.println(addressesPage.getAddressAssert());
         addressesPage.deleteAddress();
         assertEquals("Address wasn't deleted.", "Address successfully deleted!",
                         addressesPage.getDeleteAssert());
@@ -39,7 +40,7 @@ public class MyStoreTestsZaliczenie extends BaseTest {
         myAccountPage.goToWomenClothesPage();
         assertEquals("Discount isn't equal to -20%.", "-20%",
                 clothesPage.checkDiscount());
-        clothesPage.orderHummingbirdSweater('M', 5);
+        clothesPage.orderHummingbirdSweater('X', 5);
         clothesPage.addToCart();
         clothesPage.proceedToCheckout();
         orderControlPage.proceedOrder("pick", "check");
