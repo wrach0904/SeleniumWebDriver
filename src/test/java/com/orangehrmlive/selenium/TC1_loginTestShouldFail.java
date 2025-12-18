@@ -7,9 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-public class TC1_loginTest {
+public class TC1_loginTestShouldFail {
 
     WebDriver driver;
 
@@ -55,7 +57,7 @@ public class TC1_loginTest {
 
         String h6TextResult = driver.findElement(By.tagName("h6")).getText();
         String h6TextExpResult = "Dashboard";
-        Assert.assertEquals(h6TextResult, h6TextExpResult);
+        Assert.assertNotEquals(h6TextResult, h6TextExpResult);
 
     }
 
