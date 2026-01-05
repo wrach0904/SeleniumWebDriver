@@ -1,5 +1,6 @@
 package com.saucedemo;
 
+import com.BasePage;
 import org.openqa.selenium.By;
 
 public class ProductsPage extends BasePage {
